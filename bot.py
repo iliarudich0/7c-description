@@ -22,9 +22,8 @@ main_menu.add(button_books)
 
 # Dictionary to store book links
 books = {
-    "Питер Моузес - Исполнение библейских пророчеств": "http://www.blagovestnik.org/books/00139.htm",
-    "Каргель И.В. - Лекции о втором пришествии Господа Иисуса Христа": "http://www.blagovestnik.org/books/00417.htm",
-    "И. В. Каргель - Толкование на Книгу Откровение": "http://www.blagovestnik.org/books/00260.htm",
+    "Р.Ш. - Смена курса начало жизни": "https://drive.google.com/file/d/1rwJifkzz2gBfw_aEEYVPbVAOOP6RUxS4/view?usp=drive_link",
+    
     
     # Add more books here as needed
 }
@@ -34,7 +33,7 @@ async def send_welcome(message: types.Message):
     """Send a welcome message and show the main menu."""
     await message.reply("Книги, статьи, проповеди о последнем времени...", reply_markup=main_menu)
 
-@dp.message_handler(lambda message: message.text == '📚 Список книг')
+@dp.message_handler(lambda message: message.text == 'Описание 7с')
 async def send_book_list(message: types.Message):
     """Send the list of available books as clickable links."""
     response = "\u0414\u043e\u0441\u0442\u0443\u043f\u043d\u044b\u0435 \u043a\u043d\u0438\u0433\u0438:\n\n"
